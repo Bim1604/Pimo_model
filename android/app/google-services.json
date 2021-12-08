@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1000934922231",
+    "project_id": "pimo-fc268",
+    "storage_bucket": "pimo-fc268.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000934922231:android:48b825c858693a374a40f2",
+        "android_client_info": {
+          "package_name": "com.example.pimo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000934922231-sv66jekm7qu04nl3e0o9he5r3nohb3l0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pimo",
+            "certificate_hash": "9c1c06b8bf00c4b6ad0da2f561f1e251578fc6b9"
+          }
+        },
+        {
+          "client_id": "1000934922231-ejbumg0fb91id0krpemfv642ssjtr8m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHTM8DPwi5Mqx5hA8rokHsO0LboTJ0gQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000934922231-ejbumg0fb91id0krpemfv642ssjtr8m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
