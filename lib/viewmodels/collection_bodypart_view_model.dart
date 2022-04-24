@@ -2,10 +2,10 @@ import 'package:pimo/models/collection.dart';
 import 'package:pimo/models/collection_bodypart.dart';
 import 'package:pimo/models/image.dart';
 
-class CollectionBodyPartViewModel  {
-
+class CollectionBodyPartViewModel {
   ListCollectionBodyPart _listCollectionBodyPart;
-  CollectionBodyPartViewModel({ListCollectionBodyPart listCollectionBodyPart}) : _listCollectionBodyPart = listCollectionBodyPart;
+  CollectionBodyPartViewModel({ListCollectionBodyPart listCollectionBodyPart})
+      : _listCollectionBodyPart = listCollectionBodyPart;
 
   String get nameCollection {
     return _listCollectionBodyPart.collection.name;
@@ -22,10 +22,4 @@ class CollectionBodyPartViewModel  {
   int get listImageLength {
     return _listCollectionBodyPart.imageList.length;
   }
-
-  // Object get bodyPart {
-  //   return _listCollectionBodyPart.bodyPartId;
-  // }
-
-
 }

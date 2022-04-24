@@ -16,12 +16,12 @@ packages:
     source: hosted
     version: "2.1.0"
   carousel_slider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: carousel_slider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.3.4"
+    version: "4.0.0"
   characters:
     dependency: transitive
     description:

@@ -47,11 +47,11 @@ dependencies:
   firebase_storage: ^10.0.7
   dio: ^4.0.1
   localstorage: ^4.0.0+1
+  carousel_slider: ^4.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   scrollable_positioned_list: ^0.1.7
-  carousel_slider: ^2.2.1
   font_awesome_flutter: ^8.8.1
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -71,8 +71,12 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/img/background.jpg
-    - assets/img/logo.png
+    - assets/img/imgBackGround/1.png
+    - assets/img/imgBackGround/2.png
+    - assets/img/imgBackGround/3.png
+    - assets/img/Logo/Logo.png
+    - assets/img/Logo/LogoLogin.png
+    - assets/img/Icon/Question.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

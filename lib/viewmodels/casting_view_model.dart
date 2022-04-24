@@ -1,4 +1,3 @@
-
 import 'package:pimo/models/casting.dart';
 import 'package:pimo/utils/common.dart';
 
@@ -18,10 +17,6 @@ class CastingViewModel {
   String get description {
     return _casting.description;
   }
-
-  // int get monopolyTime {
-  //   return _casting.monopolyTime;
-  // }
 
   String get openDate {
     return _casting.openTime != null ? formatDate(_casting.openTime) : 'null';
@@ -51,17 +46,9 @@ class CastingViewModel {
     return _casting.status;
   }
 
-  // String get customerId {
-  //   return _casting.customerId;
-  // }
-
   String get salary {
     return formatCurrency(_casting.salary);
   }
-
-  // String get customerName {
-  //   return _casting.customerName;
-  // }
 
   int get brandId {
     return _casting.brandId;
@@ -70,12 +57,4 @@ class CastingViewModel {
   String get getStatus {
     return getCastingStatus(_casting.openTime, _casting.closeTime);
   }
-
-  // String get incomingTaskDate {
-  //   return _casting.incomingTask != null ? formatDate(_casting.incomingTask) : 'null';
-  // }
-  //
-  // String get incomingTaskTime {
-  //   return _casting.incomingTask != null ? formatTime(_casting.incomingTask) : 'null';
-  // }
 }

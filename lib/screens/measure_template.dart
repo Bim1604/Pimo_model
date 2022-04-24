@@ -57,7 +57,7 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                                     if (prevData.connectionState ==
                                         ConnectionState.waiting) {
                                       return Column(
-                                        children: <Widget>[
+                                        children: const <Widget>[
                                           SizedBox(
                                             height: 150,
                                           ),
@@ -72,7 +72,8 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                                           builder: (ctx, data, child) => Center(
                                               child: ListView.builder(
                                                   padding:
-                                                      EdgeInsets.only(top: 30),
+                                                      const EdgeInsets.only(
+                                                          top: 30),
                                                   itemCount:
                                                       data.listBodyPart.length,
                                                   itemBuilder:
@@ -107,14 +108,14 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                                                   })),
                                         );
                                       } else {
-                                        return Text('Lỗi');
+                                        return const Text('Lỗi');
                                       }
                                     }
                                   },
                                 )),
                           ),
                           ElevatedButton(
-                            child: Text('Cập nhật',
+                            child: const Text('Cập nhật',
                                 style: TextStyle(color: Colors.black)),
                             onPressed: () async {
                               Navigator.push(
@@ -148,7 +149,7 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                       child: Column(
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.only(bottom: 0),
+                            padding: const EdgeInsets.only(bottom: 0),
                             child: SizedBox(
                                 height: height / 1.5,
                                 child: FutureBuilder<BodyPartListViewModel>(
@@ -160,7 +161,7 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                                     if (prevData.connectionState ==
                                         ConnectionState.waiting) {
                                       return Column(
-                                        children: <Widget>[
+                                        children: const <Widget>[
                                           SizedBox(
                                             height: 150,
                                           ),
@@ -175,7 +176,8 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                                           builder: (ctx, data, child) => Center(
                                               child: ListView.builder(
                                                   padding:
-                                                      EdgeInsets.only(top: 30),
+                                                      const EdgeInsets.only(
+                                                          top: 30),
                                                   itemCount:
                                                       data.listStyles.length,
                                                   itemBuilder:
@@ -188,14 +190,14 @@ class _MeasureTemplatePageState extends State<MeasureTemplatePage> {
                                                   })),
                                         );
                                       } else {
-                                        return Text('Lỗi');
+                                        return const Text('Lỗi');
                                       }
                                     }
                                   },
                                 )),
                           ),
                           ElevatedButton(
-                            child: Text('Cập nhật',
+                            child: const Text('Cập nhật',
                                 style: TextStyle(color: Colors.black)),
                             onPressed: () async {
                               Navigator.push(

@@ -3,17 +3,19 @@ import 'package:pimo/constants/Theme.dart';
 
 class CardHorizontal extends StatelessWidget {
   //Khai báo những thuộc tính có trong 1 object
-  CardHorizontal(
-      {this.title = "Placeholder Title",
-        this.cta = "",
-        this.name,
-        this.id,
-        this.openTime,
-        this.address,
-        this.closeTime,
-        this.description,
-        this.img,
-        this.tap = defaultFunc});
+  const CardHorizontal(
+      {Key key,
+      this.title = "Placeholder Title",
+      this.cta = "",
+      this.name,
+      this.id,
+      this.openTime,
+      this.address,
+      this.closeTime,
+      this.description,
+      this.img,
+      this.tap = defaultFunc})
+      : super(key: key);
 
   final String name;
   final String address;
@@ -74,12 +76,12 @@ class CardHorizontal extends StatelessWidget {
                                     color: MaterialColors.muted,
                                     fontSize: 11,
                                     fontWeight: FontWeight.w600)),
-                            Text('Bắt đầu: '+openTime,
+                            Text('Bắt đầu: ' + openTime,
                                 style: TextStyle(
                                     color: MaterialColors.muted,
                                     fontSize: 11,
                                     fontWeight: FontWeight.w300)),
-                            Text('Kết thúc: '+closeTime,
+                            Text('Kết thúc: ' + closeTime,
                                 style: TextStyle(
                                     color: MaterialColors.muted,
                                     fontSize: 11,

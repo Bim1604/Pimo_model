@@ -63,8 +63,6 @@ class Page1 extends StatelessWidget {
             return MainScreen();
           },
         ));
-
-    // return MainScreen();
   }
 }
 
@@ -80,7 +78,7 @@ class Page2 extends StatelessWidget {
         child: FutureBuilder(
           future: FlutterSession().get('modelId'),
           builder: (context, snapshot) {
-            return IncomingCastingPage();
+            return const IncomingCastingPage();
           },
         ));
   }
@@ -108,10 +106,12 @@ class Page3 extends StatelessWidget {
 class Page4 extends StatelessWidget {
   const Page4({Key key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (_) => ImageCollectionProjectListViewModel()),
+          ChangeNotifierProvider(
+              create: (_) => ImageCollectionProjectListViewModel()),
           // ChangeNotifierProvider(create: (_) => CollectionListViewModel()),
         ],
         child: FutureBuilder(

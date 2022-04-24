@@ -1,10 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:pimo/screens/authentication.dart';
+import 'package:pimo/login/view_models/authentication.dart';
 import 'package:pimo/screens/home.dart';
-import 'package:pimo/screens/onboarding.dart';
-import 'package:pimo/utils/google_sign_in.dart';
+import 'package:pimo/login/view/onboarding.dart';
+import 'package:pimo/login/view_models/google_sign_in.dart';
+import 'package:pimo/screens/signin.dart';
 import 'package:provider/provider.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -17,13 +18,15 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 void main() async {
-  HttpOverrides.global = new MyHttpOverrides();
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -33,10 +36,11 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: "/onboarding",
           routes: <String, WidgetBuilder>{
-            "/onboarding": (BuildContext context) => new Onboarding(),
-            "/home": (BuildContext context) => new Home(),
+            "/onboarding": (BuildContext context) => const Onboarding(),
+            "/home": (BuildContext context) => Home(),
             "/authentication": (BuildContext context) =>
-                new HomeAuthentication(),
+                const HomeAuthentication(),
+            "/signIn": (BuildContext context) => const SignIn(),
           }),
     );
   }

@@ -2,17 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:pimo/constants/Images.dart';
 import 'package:pimo/constants/Theme.dart';
 import 'package:pimo/module/deprecated/flutter_session/flutter_session.dart';
 import 'package:pimo/viewmodels/model_availiable_model.dart';
-import 'package:pimo/viewmodels/model_view_model.dart';
 import 'package:provider/provider.dart';
-import 'package:intl/intl.dart';
-import 'model_profile.dart';
 import 'package:http/http.dart' as http;
 
 class AvailibleCreatePage extends StatefulWidget {
@@ -294,13 +289,13 @@ class _AvailibleCreateState extends State<AvailibleCreate> {
                     border: UnderlineInputBorder(),
                     suffixIcon: Icon(Icons.location_city),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
             ],
           ),
           ElevatedButton(
-            child: Text('Tạo', style: TextStyle(color: Colors.black)),
+            child: const Text('Tạo', style: TextStyle(color: Colors.black)),
             onPressed: () async {
               createAvailible();
               Navigator.pop(
@@ -310,7 +305,7 @@ class _AvailibleCreateState extends State<AvailibleCreate> {
             style: ElevatedButton.styleFrom(
                 primary: MaterialColors.mainColor,
                 elevation: 0,
-                minimumSize: Size(10, 40)),
+                minimumSize: const Size(10, 40)),
           ),
         ],
       ),

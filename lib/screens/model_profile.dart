@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pimo/screens/availiable.dart';
 import 'package:pimo/screens/project.dart';
 import 'package:pimo/screens/update_profile.dart';
-import 'package:pimo/utils/google_sign_in.dart';
+import 'package:pimo/login/view_models/google_sign_in.dart';
 import 'package:pimo/viewmodels/body_list_view_model.dart';
 import 'package:pimo/viewmodels/model_availiable_model.dart';
 import 'package:pimo/viewmodels/model_view_model.dart';
@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:pimo/constants/Theme.dart';
 import 'avatar_page.dart';
 import 'measure_template.dart';
-import 'onboarding.dart';
+import '../login/view/onboarding.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ModelProfilePage extends StatefulWidget {

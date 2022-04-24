@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:fluttertoast/fluttertoast.dart';
@@ -9,8 +8,8 @@ import 'package:pimo/models/task_list_info.dart';
 import 'package:pimo/module/deprecated/flutter_session/flutter_session.dart';
 import 'package:pimo/viewmodels/task_list_view_model.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
-class TaskService {
 
+class TaskService {
   List<TaskList> parseTaskList(String responseBody) {
     int count = 0;
     var list = jsonDecode(responseBody);
@@ -29,8 +28,8 @@ class TaskService {
       "Access-Control-Allow-Origin": "*",
       'Authorization': 'Bearer ' + jwt
     };
-    final response = await http
-        .get(Uri.parse(url + "api/v1/tasks/model") ,headers: headers);
+    final response =
+        await http.get(Uri.parse(url + "api/v1/tasks/model"), headers: headers);
     if (response.statusCode == 200) {
       var list = parseTaskList(response.body);
       return list;
@@ -46,14 +45,9 @@ class TaskService {
     heads['Accept'] = 'application/json';
     heads['Authorization'] = 'Bearer $token';
     final message = jsonEncode(params);
-    final response = await http.post(
-        Uri.parse(
-            url + 'api/v1/tasks/free-time'),
-        body: message,
-        headers: heads);
+    final response = await http.post(Uri.parse(url + 'api/v1/tasks/free-time'),
+        body: message, headers: heads);
     if (response.statusCode == 200) {
-      // var responseBody = Task.fromJson(jsonDecode(response.body));
-      // return responseBody;
       Fluttertoast.showToast(msg: 'Tạo lịch thành công');
       return true;
     } else {
@@ -78,22 +72,22 @@ class TaskService {
       throw Exception('Failed to load');
     }
   }
-
 }
 
 List<Appointment> getAppointment(TaskListViewModel list) {
   List<Appointment> task = <Appointment>[];
   for (int i = 0; i < list.listTask.length; i++) {
     task.add(Appointment(
-        // startTime: list.listTask[i].task.startDate,
-        // endTime: list.listTask[i].task.endDate.,
         color: MaterialColors.mainColor,
         subject: list.listTask[i].casting.name == null
             ? 'Free time'
-            : list.listTask[i].casting.name));
+            : list.listTask[i].casting.name,
+        startTime: null,
+        endTime: null));
   }
   return task;
 }
+
 class TaskDataSource extends CalendarDataSource {
   TaskDataSource(List<Appointment> source) {
     appointments = source;

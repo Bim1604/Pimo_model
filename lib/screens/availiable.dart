@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pimo/screens/availible_create.dart';
 import 'package:pimo/screens/availible_details.dart';
-import 'package:pimo/screens/measure_update.dart';
-import 'package:pimo/screens/styles_update.dart';
-import 'package:pimo/viewmodels/body_list_view_model.dart';
 import 'package:pimo/viewmodels/model_availiable_model.dart';
 import 'package:provider/provider.dart';
 import 'package:pimo/constants/Theme.dart';
 
 class AvailiableTemplatePage extends StatefulWidget {
   final int modelId;
-  AvailiableTemplatePage({Key key, this.modelId}) : super(key: key);
+  const AvailiableTemplatePage({Key key, this.modelId}) : super(key: key);
   @override
   _AvailiableTemplatePageState createState() => _AvailiableTemplatePageState();
 }
@@ -29,13 +26,13 @@ class _AvailiableTemplatePageState extends State<AvailiableTemplatePage> {
         child: Scaffold(
       appBar: AppBar(
         backgroundColor: MaterialColors.mainColor,
-        title: Text('Lịch trình sắp tới'),
+        title: const Text('Lịch trình sắp tới'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(bottom: 0),
+              padding: const EdgeInsets.only(bottom: 0),
               child: SizedBox(
                   height: height / 1.5,
                   child: FutureBuilder<AvailibleListViewModel>(
@@ -45,7 +42,7 @@ class _AvailiableTemplatePageState extends State<AvailiableTemplatePage> {
                     builder: (ctx, prevData) {
                       if (prevData.connectionState == ConnectionState.waiting) {
                         return Column(
-                          children: <Widget>[
+                          children: const <Widget>[
                             SizedBox(
                               height: 150,
                             ),
@@ -57,7 +54,7 @@ class _AvailiableTemplatePageState extends State<AvailiableTemplatePage> {
                           return Consumer<AvailibleListViewModel>(
                             builder: (ctx, data, child) => Center(
                                 child: ListView.builder(
-                                    padding: EdgeInsets.only(top: 30),
+                                    padding: const EdgeInsets.only(top: 30),
                                     itemCount: data.listAvailiable.length,
                                     itemBuilder: (context, index) {
                                       return CompButton(
@@ -73,15 +70,15 @@ class _AvailiableTemplatePageState extends State<AvailiableTemplatePage> {
                                     })),
                           );
                         } else {
-                          return Text('Lỗi');
+                          return const Text('Lỗi');
                         }
                       }
                     },
                   )),
             ),
             ElevatedButton(
-              child:
-                  Text('Tạo lịch trình', style: TextStyle(color: Colors.black)),
+              child: const Text('Tạo lịch trình',
+                  style: TextStyle(color: Colors.black)),
               onPressed: () async {
                 Navigator.push(
                   context,

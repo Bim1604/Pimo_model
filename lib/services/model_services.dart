@@ -32,9 +32,7 @@ class ModelServices {
   }
 
   Future<Model> getModelDetail(int modelId) async {
-    final response = await http
-        .get(Uri.parse('https://api.pimo.studio/api/v1/models/$modelId'));
-    // .get(Uri.parse('https://api.pimo.studio/api/v1/models/1'));
+    final response = await http.get(Uri.parse(url + 'api/v1/models/$modelId'));
     if (response.statusCode == 200) {
       var model = Model.fromJson(jsonDecode(response.body));
       return model;

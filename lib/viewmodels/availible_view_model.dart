@@ -1,7 +1,7 @@
 import 'package:pimo/models/availible.dart';
 
 class AvailibleViewModel {
-  Availible _availible;
+  final Availible _availible;
   AvailibleViewModel({Availible availible}) : _availible = availible;
 
   int get id {
